@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftyVideoExporter'
-  s.version          = '1.0'
+  s.version          = '1.0.1'
   s.summary          = 'SwiftyVideoExporter is to help developers in video export.'
   s.description      = 'SwiftyVideoExporter is to help developers in video export. Export from gallery, compress and crop.'
 
