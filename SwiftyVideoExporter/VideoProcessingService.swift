@@ -11,6 +11,9 @@ import AVKit
 import UIKit
 
 open class VideoProcessingService: VideoProcessingServiceProtocol {
+  public init() {
+    
+  }
   open func processVideo(processingParameters: VideoProcessingParameters) throws -> VideoProcessingOutput {
     let asset = AVAsset(url: processingParameters.sourceUrl)
     guard let videoTrack = asset.tracks(withMediaType: .video).first else {
