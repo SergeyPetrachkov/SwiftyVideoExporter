@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3922168F2129704A00EB1BB7 /* SwiftyVideoExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3922168D2129704A00EB1BB7 /* SwiftyVideoExporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3922169A2129706600EB1BB7 /* VideoProcessingOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392216952129706600EB1BB7 /* VideoProcessingOutput.swift */; };
+		3922169B2129706600EB1BB7 /* VideoProcessingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392216962129706600EB1BB7 /* VideoProcessingParameters.swift */; };
+		3922169C2129706600EB1BB7 /* VideoProcessingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392216972129706600EB1BB7 /* VideoProcessingService.swift */; };
+		3922169D2129706600EB1BB7 /* VideoAssetExportError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392216982129706600EB1BB7 /* VideoAssetExportError.swift */; };
+		3922169E2129706600EB1BB7 /* VideoProcessingServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392216992129706600EB1BB7 /* VideoProcessingServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3922168A2129704A00EB1BB7 /* SwiftyVideoExporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyVideoExporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3922168D2129704A00EB1BB7 /* SwiftyVideoExporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyVideoExporter.h; sourceTree = "<group>"; };
 		3922168E2129704A00EB1BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		392216952129706600EB1BB7 /* VideoProcessingOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProcessingOutput.swift; sourceTree = "<group>"; };
+		392216962129706600EB1BB7 /* VideoProcessingParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProcessingParameters.swift; sourceTree = "<group>"; };
+		392216972129706600EB1BB7 /* VideoProcessingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProcessingService.swift; sourceTree = "<group>"; };
+		392216982129706600EB1BB7 /* VideoAssetExportError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAssetExportError.swift; sourceTree = "<group>"; };
+		392216992129706600EB1BB7 /* VideoProcessingServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProcessingServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +56,11 @@
 		3922168C2129704A00EB1BB7 /* SwiftyVideoExporter */ = {
 			isa = PBXGroup;
 			children = (
+				392216982129706600EB1BB7 /* VideoAssetExportError.swift */,
+				392216952129706600EB1BB7 /* VideoProcessingOutput.swift */,
+				392216962129706600EB1BB7 /* VideoProcessingParameters.swift */,
+				392216972129706600EB1BB7 /* VideoProcessingService.swift */,
+				392216992129706600EB1BB7 /* VideoProcessingServiceProtocol.swift */,
 				3922168D2129704A00EB1BB7 /* SwiftyVideoExporter.h */,
 				3922168E2129704A00EB1BB7 /* Info.plist */,
 			);
@@ -95,6 +110,7 @@
 				TargetAttributes = {
 					392216892129704A00EB1BB7 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -130,6 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3922169B2129706600EB1BB7 /* VideoProcessingParameters.swift in Sources */,
+				3922169E2129706600EB1BB7 /* VideoProcessingServiceProtocol.swift in Sources */,
+				3922169D2129706600EB1BB7 /* VideoAssetExportError.swift in Sources */,
+				3922169A2129706600EB1BB7 /* VideoProcessingOutput.swift in Sources */,
+				3922169C2129706600EB1BB7 /* VideoProcessingService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +280,7 @@
 		392216932129704A00EB1BB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -267,6 +289,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SwiftyVideoExporter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -275,6 +298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.petrachkov.SwiftyVideoExporter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +307,7 @@
 		392216942129704A00EB1BB7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -291,6 +316,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SwiftyVideoExporter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
