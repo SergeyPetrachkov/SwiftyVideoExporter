@@ -15,8 +15,15 @@ public struct VideoProcessingParameters {
   public let outputUrl: URL
   public let targetFrameSize: CGSize
   public let outputFileType: AVFileType
+  public let audioSettings: [String: Any]
+  public let videoSettings: [String: Any]
   
-  public init?(sourceURL: URL, outputURL: URL, targetFrameSize: CGSize, outputFileType: AVFileType) throws {
+  public init?(sourceURL: URL,
+               outputURL: URL,
+               targetFrameSize: CGSize,
+               outputFileType: AVFileType,
+               audioSettings: [String: Any],
+               videoSettings: [String: Any]) throws {
     if targetFrameSize.width < targetFrameSize.height {
       throw VideoAssetExportError.portraitVideoNotSupported
     }
@@ -24,5 +31,7 @@ public struct VideoProcessingParameters {
     self.outputUrl = outputURL
     self.targetFrameSize = targetFrameSize
     self.outputFileType = outputFileType
+    self.audioSettings = audioSettings
+    self.videoSettings = videoSettings
   }
 }

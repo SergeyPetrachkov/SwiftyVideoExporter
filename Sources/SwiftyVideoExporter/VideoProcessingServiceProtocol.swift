@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol VideoProcessingServiceProtocol: class {
+public protocol VideoProcessingServiceProtocol: AnyObject {
   func processVideo(processingParameters: VideoProcessingParameters) throws -> VideoProcessingOutput
 }

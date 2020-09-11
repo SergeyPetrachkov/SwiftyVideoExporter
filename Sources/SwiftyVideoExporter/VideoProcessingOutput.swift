@@ -11,7 +11,7 @@ import AVKit
 
 public struct VideoProcessingOutput {
   public let inputParams: VideoProcessingParameters
-  public var result: AVAssetExportSessionStatus
+  public var result: AVAssetExportSession.Status
   public var error: Error?
   
   public init(inputParams: VideoProcessingParameters) {

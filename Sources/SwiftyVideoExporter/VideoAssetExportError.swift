@@ -11,4 +11,5 @@ import Foundation
 public enum VideoAssetExportError: Error {
   case nilVideoTrack
   case portraitVideoNotSupported
+  case aspectRatioOk
 }
